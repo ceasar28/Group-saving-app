@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Saving App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Group Saving App</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Create a New Group</h2>
+            <form>
+                <div class="form-group">
+                    <label for="group-name">Group Name:</label>
+                    <input type="text" id="group-name" name="group-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="initial-deposit">Initial Deposit:</label>
+                    <input type="number" id="initial-deposit" name="initial-deposit" required>
+                </div>
+                <button type="submit">Create Group</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Join an Existing Group</h2>
+            <form>
+                <div class="form-group">
+                    <label for="group-code">Group Code:</label>
+                    <input type="text" id="group-code" name="group-code" required>
+                </div>
+                <button type="submit">Join Group</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Group Saving App. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
