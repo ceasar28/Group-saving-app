@@ -69,6 +69,7 @@ document
     withdrawButton.textContent = "Withdraw";
     withdrawButton.addEventListener("click", function () {
       newRow.remove();
+      updateTotalAmount();
     });
     actionCell.appendChild(withdrawButton);
     newRow.appendChild(actionCell);
@@ -76,7 +77,22 @@ document
     // Add the new row to the savings table
     savingsTableBody.appendChild(newRow);
 
+    // Update total amount
+    updateTotalAmount();
+
     // Clear form inputs
     document.getElementById("name").value = "";
     document.getElementById("tier").value = 1;
   });
+
+function updateTotalAmount() {
+  const savingsTableBody = document.getElementById("savings-table-body");
+  const amountCells = Array.from(
+    savingsTableBody.getElementsByClassName("student")
+  ).map((row) => parseFloat(row.children[2].textContent));
+
+  const totalAmount = amountCells.reduce((acc, curr) => acc + curr, 0);
+
+  const totalAmountCell = document.getElementById("total-amount");
+  totalAmountCell.textContent = totalAmount.toFixed(2) + " Naira";
+}
