@@ -35,4 +35,4 @@ To run the Savings Group Application locally, you need the following:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/savings-group-app.git
+   git clone https://github.com/ceasar28/Group-saving-app.git
