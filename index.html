@@ -4,46 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Saving App</title>
+    <title>Savings Group App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Group Saving App</h1>
+        <h1>Savings Group App</h1>
     </header>
 
     <main>
         <div class="container">
-            <h2>Create a New Group</h2>
-            <form>
+            <h2>Join the Savings Group</h2>
+            <form id="savings-form">
                 <div class="form-group">
-                    <label for="group-name">Group Name:</label>
-                    <input type="text" id="group-name" name="group-name" required>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="initial-deposit">Initial Deposit:</label>
-                    <input type="number" id="initial-deposit" name="initial-deposit" required>
+                    <label for="tier">Tier:</label>
+                    <select id="tier" name="tier">
+                        <option value="1">Tier 1 - 10,000 Naira</option>
+                        <option value="2">Tier 2 - 20,000 Naira</option>
+                        <option value="3">Tier 3 - 30,000 Naira</option>
+                    </select>
                 </div>
-                <button type="submit">Create Group</button>
+                <button type="submit">Join</button>
             </form>
         </div>
 
         <div class="container">
-            <h2>Join an Existing Group</h2>
-            <form>
-                <div class="form-group">
-                    <label for="group-code">Group Code:</label>
-                    <input type="text" id="group-code" name="group-code" required>
-                </div>
-                <button type="submit">Join Group</button>
-            </form>
+            <h2>Savings Group Lists</h2>
+            <table id="savings-table">
+                <thead>
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Name</th>
+                        <th>Amount with Interest</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="savings-table-body"></tbody>
+            </table>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 Group Saving App. All rights reserved.</p>
+        <p>&copy; 2023 Savings Group App. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
